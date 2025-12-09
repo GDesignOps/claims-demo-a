@@ -636,40 +636,50 @@
             flex-shrink: 0;
         }
 
-        /* Pending Payout Tab Specific Styling */
-        [data-claims-tab="pending"] .claims-table-header .header-vendor,
-        [data-claims-tab="pending"] .claims-table-header .header-date,
-        [data-claims-tab="pending"] .claims-table-header .header-account,
-        [data-claims-tab="pending"] .claims-table-header .header-amount,
-        [data-claims-tab="pending"] .claims-table-header .header-balance {
+        /* All Claims Tabs Even Spacing */
+        .claims-table-header .header-vendor,
+        .claims-table-header .header-date,
+        .claims-table-header .header-account,
+        .claims-table-header .header-status,
+        .claims-table-header .header-amount,
+        .claims-table-header .header-balance {
             flex: 1;
         }
 
-        [data-claims-tab="pending"] .claim-item .claim-vendor {
+        .claim-item .claim-vendor {
             flex: 1;
         }
 
-        [data-claims-tab="pending"] .claim-item .claim-date,
-        [data-claims-tab="pending"] .claim-item .claim-account {
+        .claim-item .claim-date,
+        .claim-item .claim-account,
+        .claim-item .claim-status {
             flex: 1;
         }
 
+        /* Pending Payout Tab Specific - Hide Status Column */
         [data-claims-tab="pending"] .claim-item .claim-status {
             display: none;
         }
 
-        [data-claims-tab="pending"] .claim-item .claim-amounts {
+        /* Adjust amounts section for all tabs */
+        .claim-item .claim-amounts {
             flex: 2;
             gap: 24px;
         }
 
-        [data-claims-tab="pending"] .claim-item .claim-amount {
+        .claim-item .claim-amount {
             flex: 1;
             min-width: 0;
         }
 
-        [data-claims-tab="pending"] .claim-item .chevron {
+        .claim-item .chevron {
             margin-left: 0;
+        }
+
+        /* In Review and Completed tabs - adjust amounts for single amount */
+        [data-claims-tab="review"] .claim-item .claim-amounts,
+        [data-claims-tab="completed"] .claim-item .claim-amounts {
+            flex: 1;
         }
 
         /* Detail Modal/Panel */
