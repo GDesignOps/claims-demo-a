@@ -636,6 +636,42 @@
             flex-shrink: 0;
         }
 
+        /* Pending Payout Tab Specific Styling */
+        [data-claims-tab="pending"] .claims-table-header .header-vendor,
+        [data-claims-tab="pending"] .claims-table-header .header-date,
+        [data-claims-tab="pending"] .claims-table-header .header-account,
+        [data-claims-tab="pending"] .claims-table-header .header-amount,
+        [data-claims-tab="pending"] .claims-table-header .header-balance {
+            flex: 1;
+        }
+
+        [data-claims-tab="pending"] .claim-item .claim-vendor {
+            flex: 1;
+        }
+
+        [data-claims-tab="pending"] .claim-item .claim-date,
+        [data-claims-tab="pending"] .claim-item .claim-account {
+            flex: 1;
+        }
+
+        [data-claims-tab="pending"] .claim-item .claim-status {
+            display: none;
+        }
+
+        [data-claims-tab="pending"] .claim-item .claim-amounts {
+            flex: 2;
+            gap: 24px;
+        }
+
+        [data-claims-tab="pending"] .claim-item .claim-amount {
+            flex: 1;
+            min-width: 0;
+        }
+
+        [data-claims-tab="pending"] .claim-item .chevron {
+            margin-left: 0;
+        }
+
         /* Detail Modal/Panel */
         .detail-panel {
             position: fixed;
